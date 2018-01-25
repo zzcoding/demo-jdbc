@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.demo.entity.TbCompidEntity" table="tb_compid" schema="jmapper-demo">
+        <composite-id mapped="true" class="com.example.demo.entity.TbCompidEntityPK">
+            <key-property name="comidA1A" column="comid_a1a"/>
+            <key-property name="comidB1B" column="comid_b1b"/>
+        </composite-id>
+        <property name="name" column="name"/>
+        <property name="cTime" column="c_time"/>
+    </class>
+</hibernate-mapping>

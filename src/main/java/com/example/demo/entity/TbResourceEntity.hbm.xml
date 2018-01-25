@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.demo.entity.TbResourceEntity" table="tb_resource" schema="jmapper-demo">
+        <id name="sId" column="s_id"/>
+        <property name="sParentId" column="s_parent_id"/>
+        <property name="sName" column="s_name"/>
+        <property name="sSourceKey" column="s_source_key"/>
+        <property name="sType" column="s_type"/>
+        <property name="sSourceUrl" column="s_source_url"/>
+        <property name="sLevel" column="s_level"/>
+        <property name="sIcon" column="s_icon"/>
+        <property name="sIsHide" column="s_is_hide"/>
+        <property name="sDescription" column="s_description"/>
+        <property name="sCreateTime" column="s_create_time"/>
+        <property name="sUpdateTime" column="s_update_time"/>
+    </class>
+</hibernate-mapping>

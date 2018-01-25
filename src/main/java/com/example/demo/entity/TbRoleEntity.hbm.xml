@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.demo.entity.TbRoleEntity" table="tb_role" schema="jmapper-demo">
+        <id name="rId" column="r_id"/>
+        <property name="rName" column="r_name"/>
+        <property name="rKey" column="r_key"/>
+        <property name="rStatus" column="r_status"/>
+        <property name="rDescription" column="r_description"/>
+        <property name="rCreateTime" column="r_create_time"/>
+        <property name="rUpdateTime" column="r_update_time"/>
+    </class>
+</hibernate-mapping>

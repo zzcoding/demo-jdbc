@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.demo.entity.TbUserEntity" table="tb_user" schema="jmapper-demo">
+        <id name="uId" column="u_id"/>
+        <property name="uName" column="u_name"/>
+        <property name="uAccountName" column="u_account_name"/>
+        <property name="uPassword" column="u_password"/>
+        <property name="uDeleteStatus" column="u_delete_status"/>
+        <property name="uLocked" column="u_locked"/>
+        <property name="uDescription" column="u_description"/>
+        <property name="uCredentialsSalt" column="u_credentials_salt"/>
+        <property name="uCreatorName" column="u_creator_name"/>
+        <property name="uCreateTime" column="u_create_time"/>
+        <property name="uUpdateTime" column="u_update_time"/>
+        <property name="u1" column="u_1"/>
+        <property name="u2" column="u_2"/>
+        <property name="u3" column="u_3"/>
+        <property name="uU" column="u_u"/>
+        <property name="uU1" column="u_u1"/>
+        <property name="username" column="username"/>
+        <property name="passWord" column="passWord"/>
+    </class>
+</hibernate-mapping>

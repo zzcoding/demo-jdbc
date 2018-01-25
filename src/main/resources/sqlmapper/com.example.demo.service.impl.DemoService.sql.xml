@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.example.demo.service.impl.DemoService">
+    <!-- 查询tb_resource -->
+    <sql id="select">
+        <![CDATA[
+			SELECT
+				*
+			FROM
+				tb_resource
+		]]>
+    </sql>
+    <!--#查询tb_user-->
+    <sql id="select.complex.condition">
+        <![CDATA[
+			SELECT
+                u_id,
+                u_name,
+                u_account_name,
+                u_password,
+                u_description,
+                u_credentials_salt,
+                u_create_time,
+                u_update_time,
+                PASSWORD
+            FROM
+                tb_user
+                where  1=1
+                <#if username?has_content>
+                 and u_name=:username
+                </#if>
+			    <#if ids?has_content>
+			    and  u_id in
+			    (
+			    	<#list ids as id >
+				     	${id}<#if id_has_next>,</#if>
+				 	</#list>
+				)
+			    </#if>
+		]]>
+    </sql>
+    <!--#查询tb_user-->
+    <sql id="update.tb_user">
+        <![CDATA[
+		update tb_user set u_name=? where u_id=?
+		]]>
+    </sql>
+    <!--#查询tb_user-->
+    <sql id="select.map.n.tb_user">
+        <![CDATA[
+		  select u_name from tb_user where u_id=:id
+		]]>
+    </sql>
+</mapper>
+

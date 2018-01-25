@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.demo.entity.TbLoginInfoEntity" table="tb_login_info" schema="jmapper-demo">
+        <id name="lId" column="l_id"/>
+        <property name="uId" column="u_id"/>
+        <property name="uAccountName" column="u_account_name"/>
+        <property name="lIp" column="l_ip"/>
+        <property name="lLoginTime" column="l_login_time"/>
+    </class>
+</hibernate-mapping>
